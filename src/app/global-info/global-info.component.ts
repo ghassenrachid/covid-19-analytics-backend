@@ -13,22 +13,22 @@ import { DashboardService } from '../services/dashboard-service.service';
 export class GlobalInfoComponent implements OnInit {
 
   public tmp_dashboard : Dashboard;
-
+  public lastUpdate: string;
   constructor(private dashboardService : DashboardService) { }
 
   ngOnInit(): void {
     this.dashboardService.getDashboard()
     .subscribe(data => {
-      this.tmp_dashboard = data;
-      console.log('data',data);
+      this.tmp_dashboard = data[0];
+      console.log(typeof this.tmp_dashboard.timestamp);
+      this.lastUpdate = new Date(Date.parse(this.tmp_dashboard.timestamp.toString())).toUTCString();
     });
   }
 
   public addDashboard(dashboard : Dashboard){
     this.dashboardService.addDashboardService(dashboard)
       .subscribe(data => {
-        this.tmp_dashboard = data;
-        console.log('data',data);
+        this.tmp_dashboard = data[0];
       });
   }
 

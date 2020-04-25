@@ -1,3 +1,5 @@
+import { Timestamp } from 'rxjs';
+
 export class Dashboard {
   id : number;
   peopleTested : number;

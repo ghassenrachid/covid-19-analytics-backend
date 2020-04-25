@@ -13,7 +13,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class DashboardService {
 
-  private wsUrl = 'https://covid-19-analytics-api.herokuapp.com/'; //URL to web api
+  private wsUrl = 'https://covid-19-analytics-api.herokuapp.com'; //URL to web api
   constructor( private http: HttpClient ) {}
 
   /** GET heroes from the server */
