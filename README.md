@@ -1,4 +1,4 @@
-# Covid19BackendAnalytics
+# covid19-backend-analytics
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 

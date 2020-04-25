@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "covid19BackendAnalytics": {
+    "covid19-backend-analytics": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/covid19BackendAnalytics",
+            "outputPath": "dist/covid19-backend-analytics",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "covid19BackendAnalytics:build"
+            "browserTarget": "covid19-backend-analytics:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "covid19BackendAnalytics:build:production"
+              "browserTarget": "covid19-backend-analytics:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "covid19BackendAnalytics:build"
+            "browserTarget": "covid19-backend-analytics:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "covid19BackendAnalytics:serve"
+            "devServerTarget": "covid19-backend-analytics:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "covid19BackendAnalytics:serve:production"
+              "devServerTarget": "covid19-backend-analytics:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "covid19BackendAnalytics"
+  "defaultProject": "covid19-backend-analytics"
 }
