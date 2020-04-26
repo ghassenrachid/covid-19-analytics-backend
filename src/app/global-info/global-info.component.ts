@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Component , OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Dashboard } from '../models/dashboard.models';
 import { DashboardService } from '../services/dashboard-service.service';
 
@@ -20,7 +20,6 @@ export class GlobalInfoComponent implements OnInit {
     this.dashboardService.getDashboard()
     .subscribe(data => {
       this.tmp_dashboard = data[0];
-      console.log(typeof this.tmp_dashboard.timestamp);
       this.lastUpdate = new Date(Date.parse(this.tmp_dashboard.timestamp.toString())).toUTCString();
     });
   }

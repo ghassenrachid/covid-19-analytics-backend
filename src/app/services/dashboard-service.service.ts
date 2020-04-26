@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Dashboard } from '../models/dashboard.models';
 import 'rxjs/add/operator/map';
 
-import { Http, Response } from '@angular/http';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 //import {catchError, map, tap} from 'rxjs/operator';
