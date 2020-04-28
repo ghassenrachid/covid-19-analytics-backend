@@ -22,6 +22,9 @@ export class WorldwideComponent implements OnInit {
       console.log(data);
       this.tmp_worldwide = data;
       console.log(data);
+    },
+    error => {
+      alert(error);
     });
   }
 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Component, Inject, OnInit } from '@angular/core';
 import { User } from '../models/user.models';
 import { UserService } from '../services/user-service.service';
+import 'rxjs/add/operator/catch';
 
 
 @Component({
@@ -24,15 +25,23 @@ export class ConfirmedCaseComponent implements OnInit {
     this.userService.getUserByPhoneNumber(this.phoneNumber)
     .subscribe(data => {
       this.tmp_user = data;
-    });
+    },
+      error => {
+        alert('User not found');
+      });
   }
   
   addConfirmedUser(){
     this.userService.addConfirmedUser(this.tmp_user.id)
-    .subscribe(data => {
-      console.log(data);
-      this.tmp_user = data;
-    }
+    .subscribe(
+      data => {
+        alert('Case confirmed');
+        this.tmp_user = null;
+        this.phoneNumber = '';
+      },
+      error => {
+        alert('Error to add confirmed case');
+      }
     );
   }
 }

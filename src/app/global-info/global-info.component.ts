@@ -27,6 +27,9 @@ export class GlobalInfoComponent implements OnInit {
     .subscribe(data => {
       this.tmp_dashboard = data[0];
       this.lastUpdate = new Date(Date.parse((this.tmp_dashboard.timestamp).toString())).toUTCString();
+    },
+    error => {
+      alert(error);
     });
   }
 

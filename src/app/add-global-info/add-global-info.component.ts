@@ -37,6 +37,9 @@ export class AddGlobalInfoComponent implements OnInit {
     this.dashboardService.addDashboardService(dashboard)
       .subscribe(data => {
         this.tmp_dashboard = data[0];
+      },
+      error => {
+        alert(error);
       });
   }
 
