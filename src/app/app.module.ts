@@ -7,7 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { WorldwideComponent } from './worldwide/worldwide.component';
 import { GlobalInfoComponent } from './global-info/global-info.component';
-import { AddGlobalInfoComponent} from './add-global-info/add-global-info.component'
+import { AddGlobalInfoComponent} from './add-global-info/add-global-info.component';
+import { ConfirmedCaseComponent} from './confirmedCase/confirmed-case.component';
+
+
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -18,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
     WorldwideComponent,
     GlobalInfoComponent,
     AddGlobalInfoComponent,
+    ConfirmedCaseComponent
   ],
   imports: [
     BrowserModule,

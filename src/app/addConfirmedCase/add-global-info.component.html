@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Add new local informations</h1>
+<div mat-dialog-content>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Positive cases</mat-label>
+            <input type="number" minlength="0" matInput placeholder="{{data.positiveCases}}" [(ngModel)]='data.positiveCases'>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>People tested</mat-label>
+            <input type="number" minlength="0" matInput placeholder="{{data.peopleTested}}" [(ngModel)]='data.peopleTested'>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>People recovered</mat-label>
+            <input type="number" minlength="0" matInput placeholder="{{data.peopleRecovered}}" [(ngModel)]='data.peopleRecovered'>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Total mortality</mat-label>
+            <input type="number" minlength="0" matInput placeholder="{{data.totalMortality}}" [(ngModel)]='data.totalMortality'>
+        </mat-form-field>
+    </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-stroked-button (click)="onSaveClick()">Save</button>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Cancel</button>
+</div>
