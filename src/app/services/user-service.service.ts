@@ -20,7 +20,7 @@ export class UserService{
   }
 
   addConfirmedUser(userId:number): Observable<User>{
-    return this.http.post<User>(this.wsUrl+"/addConfirmedCase", userId);
+    return this.http.put<User>(this.wsUrl+"/addConfirmedCase/"+userId, userId);
   }
 
 }

@@ -25,6 +25,7 @@ export class ConfirmedCaseComponent implements OnInit {
     this.userService.getUserByPhoneNumber(this.phoneNumber)
     .subscribe(data => {
       this.tmp_user = data;
+      console.log(data);
     },
       error => {
         alert('User not found');
@@ -32,10 +33,12 @@ export class ConfirmedCaseComponent implements OnInit {
   }
   
   addConfirmedUser(){
-    this.userService.addConfirmedUser(this.tmp_user.id)
+    console.log(this.tmp_user)
+    this.userService.addConfirmedUser(this.tmp_user._id)
     .subscribe(
       data => {
         alert('Case confirmed');
+        console.log(data);
         this.tmp_user = null;
         this.phoneNumber = '';
       },
