@@ -12,11 +12,11 @@
   <span>Rechercher</span>
 </button>
 <div *ngIf="tmp_user">
-  <p>Name: {{tmp_user.name}}</p>
-  <p>Phone Number{{tmp_user.phoneNumber}}</p>
-  <p>Email: {{tmp_user.email}}</p>
-  <p>Age: {{tmp_user.age}}</p>
-  <p>Sex: {{tmp_user.sex}}</p>
+  <p><b>Name: </b>{{tmp_user.name}}</p>
+  <p><b>Phone Number:</b> {{tmp_user.phoneNumber}}</p>
+  <p><b>Email: </b>{{tmp_user.email}}</p>
+  <p><b>Age: </b>{{tmp_user.age}}</p>
+  <p><b>Sex: </b>{{tmp_user.sex}}</p>
   <button mat-stroked-button (click)="addConfirmedUser()">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
     <span>Add as Confirmed case</span>

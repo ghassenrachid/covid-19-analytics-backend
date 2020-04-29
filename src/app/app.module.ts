@@ -10,10 +10,11 @@ import { GlobalInfoComponent } from './global-info/global-info.component';
 import { AddGlobalInfoComponent} from './add-global-info/add-global-info.component';
 import { ConfirmedCaseComponent} from './confirmedCase/confirmed-case.component';
 
-
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     HttpClientModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [],
   entryComponents: [AddGlobalInfoComponent],

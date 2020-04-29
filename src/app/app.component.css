@@ -285,9 +285,5 @@
   }
   
 .example-card {
-    display: inline-block;
-    width: 30%;
     margin: 20px;
-    vertical-align: top;
-    cursor: pointer;
 }
