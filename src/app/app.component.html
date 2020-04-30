@@ -5,7 +5,7 @@
   <img
     width="40"
     alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    src="../assets/img/logo.png"
   />
   <span>{{ title }}</span>
     <div class="spacer"></div>
@@ -19,21 +19,28 @@
 
 <div class="content" role="main" fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
   <mat-card class="example-card" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <mat-card-title>Worldwide informations</mat-card-title>
+    <mat-card-title>
+      <img id="dimg_3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAARVBMVEUAAABChfRChfRBhfRChfRBhPVAhvVBhfRChfRChPRBhfNChPRChfNChPRAh/dAhfRChfNBhPRBhPNBhPRBhPNAhfRBhPS7Bx6gAAAAF3RSTlMAYJ/P/09Q35DgwI/wcCAwgKCw0O9vv5uoiNwAAACdSURBVHgBndAFFsJAEATRhhQrcb//UXmDS/yvu+i40zmB5HzRN+d58E4fAsRImlpO9tmfFyWUloqc8NqHvFJNI7UUquC5W6SQOms6EqnAP+7DHyfT8KeR6aik+n5ksF0rEhmQDdR6FTA/MLNVN3/43HX/H9hJBfH1JX2l4vklDpweAv3w+kQIX9/uPWNqOUEfXOQhOn1zTQdd43TYFdiMB87SSSztAAAAAElFTkSuQmCC" class="rISBZc" height="20" style="margin-right:8px" width="20" alt="Worldwide" data-atf="1">
+      Worldwide</mat-card-title>
     <mat-card-content>
       <app-worldwide></app-worldwide>
     </mat-card-content>
   </mat-card>
 
   <mat-card class="example-card" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <mat-card-title>Local informations</mat-card-title>
+    <mat-card-title>
+      <img id="dimg_1" src="data:image/png;base64,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" class="rISBZc" height="20" style="margin-right:8px" width="20" alt="Tunisia" data-atf="1">
+      Local
+    </mat-card-title>
     <mat-card-content>
       <app-global-info></app-global-info>
     </mat-card-content>
   </mat-card>
 
   <mat-card class="example-card" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <mat-card-title>Add confirmed case</mat-card-title>
+    <mat-card-title>
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" style="margin-right:8px" width="20" alt="Add" data-atf="1" viewBox="0 0 512 512"><path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" fill="#2196f3"/><path d="m368 277.332031h-90.667969v90.667969c0 11.777344-9.554687 21.332031-21.332031 21.332031s-21.332031-9.554687-21.332031-21.332031v-90.667969h-90.667969c-11.777344 0-21.332031-9.554687-21.332031-21.332031s9.554687-21.332031 21.332031-21.332031h90.667969v-90.667969c0-11.777344 9.554687-21.332031 21.332031-21.332031s21.332031 9.554687 21.332031 21.332031v90.667969h90.667969c11.777344 0 21.332031 9.554687 21.332031 21.332031s-9.554687 21.332031-21.332031 21.332031zm0 0" fill="#fafafa"/></svg>
+      Add confirmed case</mat-card-title>
     <mat-card-content>
       <app-confirmed-case></app-confirmed-case>
     </mat-card-content>
